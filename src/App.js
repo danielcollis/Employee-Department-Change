@@ -7,6 +7,13 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="header">
+          <div className="logo-container">
+            <img 
+              src="https://content.energage.com/company-images/SE91923/SE91923_logo_orig.png" 
+              alt="Miller Clapperton Logo" 
+              className="header-logo"
+            />
+          </div>
           <h1>Your Career Journey Starts Here</h1>
           <p>Real employee progression paths showing how you can grow within our company</p>
         </div>
