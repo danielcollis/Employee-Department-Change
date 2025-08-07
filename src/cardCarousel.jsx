@@ -115,18 +115,23 @@ function EmployeeJourneyCarousel() {
           style={{ scrollBehavior: "smooth" }}
         >
           {journeys.map((journey, idx) => (
-            <div
-              key={idx}
-              className="min-w-[280px] max-w-xs bg-white rounded-2xl shadow-lg p-6 flex flex-col items-start snap-center transition hover:shadow-xl"
-            >
-              <h3 className="text-lg font-bold mb-2">{journey.title}</h3>
-              <ol className="list-decimal list-inside text-sm text-gray-700 space-y-1">
-                {journey.steps.map((step, stepIdx) => (
-                  <li key={stepIdx} className={stepIdx === journey.steps.length - 1 ? "font-semibold text-green-600" : ""}>
-                    {step}
-                  </li>
-                ))}
-              </ol>
+                         <div
+               key={idx}
+               className="min-w-[280px] max-w-xs bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center snap-center transition hover:shadow-xl"
+             >
+               <h3 className="text-lg font-bold mb-2 text-center">{journey.title}</h3>
+                              <div className="text-sm text-gray-700 space-y-1 text-center">
+                 {journey.steps.map((step, stepIdx) => (
+                   <div key={stepIdx} className="flex flex-col items-center">
+                     <div className={stepIdx === journey.steps.length - 1 ? "font-semibold text-green-600" : ""}>
+                       {step}
+                     </div>
+                     {stepIdx < journey.steps.length - 1 && (
+                       <div className="text-gray-400 text-xs my-1">↓</div>
+                     )}
+                   </div>
+                 ))}
+               </div>
             </div>
           ))}
         </div>
