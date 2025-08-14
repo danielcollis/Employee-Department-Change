@@ -37,7 +37,7 @@ function App() {
           </div>
           <div className="legend-item">
             <div className="legend-dot executive"></div>
-            <span>Executive</span>
+            <span>Senior</span>
           </div>
           <div className="legend-item">
             <div className="legend-dot dept-switch"></div>
